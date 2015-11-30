@@ -26,7 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9E926BA81C0A3D9600841D28 /* HansoftCopy */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = HansoftCopy; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E926BA81C0A3D9600841D28 /* HansoftCopy */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = HansoftCopy; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E926BBA1C0A416200841D28 /* Copier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Copier.cpp; sourceTree = "<group>"; };
 		9E926BBB1C0A416200841D28 /* Copier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Copier.h; sourceTree = "<group>"; };
 		9E926BBC1C0A416200841D28 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
