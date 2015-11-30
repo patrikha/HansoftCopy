@@ -1,0 +1,267 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9E926BBF1C0A416200841D28 /* Copier.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E926BBA1C0A416200841D28 /* Copier.cpp */; };
+		9E926BC01C0A416200841D28 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E926BBC1C0A416200841D28 /* main.cpp */; };
+		9E926BC11C0A416200841D28 /* OptionParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E926BBD1C0A416200841D28 /* OptionParser.cpp */; };
+		9E926BC51C0B0EE700841D28 /* HPMSdkCpp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9E926BC41C0B0EE700841D28 /* HPMSdkCpp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9E926BA61C0A3D9600841D28 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		9E926BA81C0A3D9600841D28 /* HansoftCopy */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "compiled.mach-o.executable"; path = HansoftCopy; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E926BBA1C0A416200841D28 /* Copier.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Copier.cpp; sourceTree = "<group>"; };
+		9E926BBB1C0A416200841D28 /* Copier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Copier.h; sourceTree = "<group>"; };
+		9E926BBC1C0A416200841D28 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		9E926BBD1C0A416200841D28 /* OptionParser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OptionParser.cpp; sourceTree = "<group>"; };
+		9E926BBE1C0A416200841D28 /* OptionParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OptionParser.h; sourceTree = "<group>"; };
+		9E926BC31C0B0E7E00841D28 /* HPMSdk.x64.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.bundle"; name = HPMSdk.x64.dylib; path = ../HansoftSDK/OSX10.6/HPMSdk.x64.dylib; sourceTree = "<group>"; };
+		9E926BC41C0B0EE700841D28 /* HPMSdkCpp.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = HPMSdkCpp.cpp; path = ../../HansoftSDK/HPMSdkCpp.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9E926BA51C0A3D9600841D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9E926B9F1C0A3D9600841D28 = {
+			isa = PBXGroup;
+			children = (
+				9E926BC31C0B0E7E00841D28 /* HPMSdk.x64.dylib */,
+				9E926BAA1C0A3D9600841D28 /* HansoftCopy */,
+				9E926BA91C0A3D9600841D28 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9E926BA91C0A3D9600841D28 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9E926BA81C0A3D9600841D28 /* HansoftCopy */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9E926BAA1C0A3D9600841D28 /* HansoftCopy */ = {
+			isa = PBXGroup;
+			children = (
+				9E926BC41C0B0EE700841D28 /* HPMSdkCpp.cpp */,
+				9E926BBA1C0A416200841D28 /* Copier.cpp */,
+				9E926BBB1C0A416200841D28 /* Copier.h */,
+				9E926BBC1C0A416200841D28 /* main.cpp */,
+				9E926BBD1C0A416200841D28 /* OptionParser.cpp */,
+				9E926BBE1C0A416200841D28 /* OptionParser.h */,
+			);
+			path = HansoftCopy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9E926BA71C0A3D9600841D28 /* HansoftCopy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E926BAF1C0A3D9600841D28 /* Build configuration list for PBXNativeTarget "HansoftCopy" */;
+			buildPhases = (
+				9E926BA41C0A3D9600841D28 /* Sources */,
+				9E926BA51C0A3D9600841D28 /* Frameworks */,
+				9E926BA61C0A3D9600841D28 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HansoftCopy;
+			productName = HansoftCopy;
+			productReference = 9E926BA81C0A3D9600841D28 /* HansoftCopy */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9E926BA01C0A3D9600841D28 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Patrik Hartlén";
+				TargetAttributes = {
+					9E926BA71C0A3D9600841D28 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+				};
+			};
+			buildConfigurationList = 9E926BA31C0A3D9600841D28 /* Build configuration list for PBXProject "HansoftCopy" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9E926B9F1C0A3D9600841D28;
+			productRefGroup = 9E926BA91C0A3D9600841D28 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9E926BA71C0A3D9600841D28 /* HansoftCopy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9E926BA41C0A3D9600841D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E926BC51C0B0EE700841D28 /* HPMSdkCpp.cpp in Sources */,
+				9E926BC01C0A416200841D28 /* main.cpp in Sources */,
+				9E926BC11C0A416200841D28 /* OptionParser.cpp in Sources */,
+				9E926BBF1C0A416200841D28 /* Copier.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		9E926BAD1C0A3D9600841D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		9E926BAE1C0A3D9600841D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		9E926BB01C0A3D9600841D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = ../HansoftSDK/;
+				LIBRARY_SEARCH_PATHS = ../HansoftSDK/OSX10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9E926BB11C0A3D9600841D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				HEADER_SEARCH_PATHS = ../HansoftSDK/;
+				LIBRARY_SEARCH_PATHS = ../HansoftSDK/OSX10.6;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9E926BA31C0A3D9600841D28 /* Build configuration list for PBXProject "HansoftCopy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E926BAD1C0A3D9600841D28 /* Debug */,
+				9E926BAE1C0A3D9600841D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9E926BAF1C0A3D9600841D28 /* Build configuration list for PBXNativeTarget "HansoftCopy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E926BB01C0A3D9600841D28 /* Debug */,
+				9E926BB11C0A3D9600841D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9E926BA01C0A3D9600841D28 /* Project object */;
+}

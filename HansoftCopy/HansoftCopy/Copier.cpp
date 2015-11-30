@@ -24,13 +24,8 @@
 #include <sys/stat.h>
 #endif
 #endif
-#include <iostream>
-#include <fstream>
 #include <string>
-#include <sstream>
-#include <map>
-#include <set>
-#include <algorithm>
+#include <iostream>
 
 using namespace std;
 using namespace HPMSdk;
