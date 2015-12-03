@@ -17,3 +17,7 @@ xcuserdata
 *.xccheckout
 *.moved-aside
 *.xcuserstate
+
+## HansoftSDK
+HansoftSDK/*
+!HansoftSDK/unzip_hansoft_sdk_here
