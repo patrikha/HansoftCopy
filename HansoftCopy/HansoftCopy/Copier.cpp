@@ -26,6 +26,7 @@
 #endif
 #include <string>
 #include <iostream>
+#include <map>
 
 using namespace std;
 using namespace HPMSdk;
@@ -242,6 +243,14 @@ public:
         return program_backlog_id;
     }
 
+    HPMUniqueID GetProductSchedule(HPMUniqueID project_id)
+    {
+        auto program_backlog_id = session_->ProjectOpenBacklogProject(project_id);
+        if (!program_backlog_id.IsValid())
+            wcerr << "Can not open program schedule!\r\n";
+        return program_backlog_id;
+    }
+
     HPMProjectCustomColumnsColumn FindColumn(HPMUniqueID project_id, HPMString name)
     {
         for (auto column : session_->ProjectCustomColumnsGet(project_id).m_ShowingColumns)
@@ -313,6 +322,74 @@ public:
         }
     }
 
+    void CustomColumnCopy()
+    {
+        auto project_id = FindProjectByName(project_);
+        if (!project_id.IsValid())
+            return;
+        auto program_backlog_id = GetProductBacklog(project_id);
+        auto program_schedule_id = GetProductSchedule(project_id);
+        if (!program_backlog_id.IsValid())
+            return;
+        auto source_column = FindColumn(program_backlog_id, source_);
+        auto destination_column = FindColumn(program_backlog_id, destination_);
+        if (source_column.m_Name == "" || destination_column.m_Name == "")
+            return;
+        int count = 0;
+        for (auto task : session_->TaskEnum(program_backlog_id).m_Tasks)
+        {
+            auto data = GetCustomColumnValue(task, source_column);
+            SetCustomColumnValue(task, destination_column, data);
+            count++;
+        }
+        wcout << "Copied: " << count << " tasks.\r\n";
+    }
+
+    void PriorityCopy()
+    {
+        auto project_id = FindProjectByName(project_);
+        if (!project_id.IsValid())
+            return;
+        auto program_backlog_id = GetProductBacklog(project_id);
+        if (!program_backlog_id.IsValid())
+            return;
+        auto destination_column = FindColumn(program_backlog_id, destination_);
+        if (destination_column.m_Name == "")
+            return;
+        int count = 0;
+        HPMUniqueID first;
+        map<HPMUniqueID, HPMUniqueID> dictionary;
+        for (auto task : session_->TaskRefUtilEnumChildren(program_backlog_id, true).m_Tasks)
+        {
+            auto previous = session_->TaskRefGetPreviousWorkPriorityID(task);
+            dictionary[previous] = task;
+            if (previous.m_ID == -2)
+                first = task;
+            count++;
+        }
+        if (dictionary.size() == 0)
+        {
+            wcout << "No items in backlog, nothing to do.\r\n";
+            return;
+        }
+        vector<HPMUniqueID> sorted;
+        auto item = first;
+        while (dictionary.find(item) != dictionary.end())
+        {
+            sorted.push_back(item);
+            item = dictionary[item];
+        }
+        if (dictionary.size() > 1)
+            sorted.push_back(item);
+        int index = 1;
+        for (auto task_ref : sorted)
+        {
+            HPMUniqueID task = session_->TaskRefGetTask(task_ref);
+            session_->TaskSetCustomColumnData(task, destination_column.m_Hash, to_string(index++), false);
+        }
+        wcout << "Copied: " << count << " tasks.\r\n";
+    }
+
     void Copy()
     {
         if (InitConnection())
@@ -325,24 +402,12 @@ public:
                 }
                 else
                 {
-                    auto project_id = FindProjectByName(project_);
-                    if (!project_id.IsValid())
-                        return;
-                    auto program_backlog_id = GetProductBacklog(project_id);
-                    if (!program_backlog_id.IsValid())
-                        return;
-                    auto source_column = FindColumn(program_backlog_id, source_);
-                    auto destination_column = FindColumn(program_backlog_id, destination_);
-                    if (source_column.m_Name == "" || destination_column.m_Name == "")
-                        return;
-                    int count = 0;
-                    for (auto task : session_->TaskEnum(program_backlog_id).m_Tasks)
-                    {
-                        auto data = GetCustomColumnValue(task, source_column);
-                        SetCustomColumnValue(task, destination_column, data);
-                        count++;
-                    }
-                    wcout << "Copied: " << count << " tasks.\r\n";
+                    auto lower(source_);
+                    transform(lower.begin(), lower.end(), lower.begin(), ::tolower);
+                    if (lower == "priority")
+                        PriorityCopy();
+                    else
+                        CustomColumnCopy();
                 }
             }
             catch (HPMSdkException &_error)
