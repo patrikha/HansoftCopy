@@ -16,7 +16,7 @@ Options:
   -h, --help            show this help message and exit
   -s SERVER, --server=SERVER
                         Hansoft server address
-  -p PORT, --port=PORT  Hansoft server port
+  -o PORT, --port=PORT  Hansoft server port
   -d DATABASE, --database=DATABASE
                         Hansoft database
   -u USERNAME, --username=USERNAME
@@ -26,9 +26,9 @@ Options:
   -r PROJECT, --project=PROJECT
                         Hansoft project
   -f SOURCE, --source=SOURCE
-                        Hansoft source column
+                        Hansoft source custom column or built in [priority, ]
   -t DESTINATION, --destination=DESTINATION
-                        Hansoft destination column
+                        Hansoft destination custom column
 ```
 
 ## Limitations
